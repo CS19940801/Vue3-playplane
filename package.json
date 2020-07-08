@@ -1,0 +1,41 @@
+{
+  "name": "vue3-playplane",
+  "version": "1.0.0",
+  "description": "vue3demo test customer-render+canvas(pixi)",
+  "main": "index.js",
+  "dependencies": {
+    "@vue/runtime-core": "^3.0.0-beta.19",
+    "pixi": "^0.3.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "serve": "^11.3.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS19940801/Vue3-playplane.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "vue-next",
+    "canvas",
+    "pixijs",
+    "pixi",
+    "game"
+  ],
+  "author": "cs_enjoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CS19940801/Vue3-playplane/issues"
+  },
+  "homepage": "https://github.com/CS19940801/Vue3-playplane#readme"
+}
