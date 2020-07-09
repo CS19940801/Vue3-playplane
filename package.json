@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@vue/runtime-core": "^3.0.0-beta.19",
-    "pixi": "^0.3.1"
+    "pixi.js": "^5.3.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
@@ -18,8 +18,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
-    "start": "serve .",
-    "dev": "webapck-dev-server --open"
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",

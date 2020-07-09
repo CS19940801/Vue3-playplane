@@ -1,5 +1,5 @@
-import { createRenderer } from '@vue/runtime-core'
-import { Graphics, Text } from 'pixi.js'
+import { createRenderer } from '@vue/runtime-core';
+import { Graphics, Text } from 'pixi.js';
 // 创建渲染器
 // 实现渲染接口
 const renderer = createRenderer({
