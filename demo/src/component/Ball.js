@@ -13,7 +13,14 @@ export default defineComponent({
         
         const speed = 5
 
-        const ballroll = function(){
+        function ballroll(){
+            let time = new Date().getTime()
+            if (sessionStorage.getItem('time')){
+                let oldtime = sessionStorage.getItem('time')
+                console.warn(`渲染频率：${ time - oldtime}ms`)
+            }
+            sessionStorage.setItem("time",time)
+            
             switch (direction) {
                 case "r":
                     ballx.value += speed
@@ -33,13 +40,40 @@ export default defineComponent({
             }
             console.log(ballx.value);
         }
+        // setInterval By setTimout
+        function Interval(fn,time){
+            if ('function' != typeof fn) {
+                console.warn(typeof fn,'fn must be function！！！！！');
+                return false
+            }
+            function go(){
+                fn()
+                setTimeout(go, time)
+            }
+            // console.log(`Interval`, Interval);
+            setTimeout(go,time)
+        }
+        // ticker.add By requestAnimationFrame
+        function requestAnimationFrameInterval(fn){
+            if ('function' != typeof fn) {
+                console.warn(typeof fn,'fn must be function！！！！！');
+                return false
+            }
+            function go(){
+                fn()
+                requestAnimationFrame(go)
+            }
+            requestAnimationFrame(go)
+        }
+
         // setInterval(ballroll, 100); // 老方法
+        // Interval(ballroll, 100); // setTimeout实现setInterval
         
-        // requestAnimationFrame 根据浏览器渲染 循环 效果>setInterval
+        // requestAnimationFrame 根据浏览器渲染重绘时间（通常1000/60 一秒六十帧） 调用 效果 》 setTimout setInterval 
         // PIXI循环 getGame().ticker.add()
-        
         // getGame().ticker.add(ballroll)
-        
+        // requestAnimationFrameInterval(ballroll) // requestAnimationFrame实现setInterval
+   
         return {
             ballx,
             sign

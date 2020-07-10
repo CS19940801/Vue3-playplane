@@ -4,7 +4,7 @@ import { Graphics, Text } from 'pixi.js';
 // 实现渲染接口
 const renderer = createRenderer({
     // 创建节点
-    createElement(type) { 
+    createElement(type) {
         console.log("----createElement----");
         console.log(type);
         // 基于type去创建视图 自定义tag
@@ -51,7 +51,7 @@ const renderer = createRenderer({
     },
     // 获取兄弟节点
     nextSibling(){
-        
+
     }
 })
 // 对外暴露createApp创建vue实例
