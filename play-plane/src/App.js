@@ -12,6 +12,7 @@ export default defineComponent({
       h("circle", { x: 400, y: 200 }),
       "开课吧nb"
     ]);
+    console.log(`---vnode---`);
     console.log(vnode);
     return vnode;
   },

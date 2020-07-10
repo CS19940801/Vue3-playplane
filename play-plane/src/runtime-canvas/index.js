@@ -19,7 +19,8 @@ const renderer = createRenderer({
   },
   insert(el, parent) {
     console.log("-----insert ------");
-    console.log(el);
+    console.log(`el：${el}`);
+    console.log(`parent：${parent}`);
     parent.addChild(el);
   },
   patchProp(el, key, prevValue, nextValue) {

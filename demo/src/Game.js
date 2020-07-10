@@ -5,11 +5,14 @@ import * as PIXI from "pixi.js";
 // 初始化
 const game = new PIXI.Application({
     width: 750,
-    height: 1080,
+    height: 800,
 });
-
 document.body.appendChild(game.view);
 
 export function getCanvasRootContainer(){
     return game.stage;
+}
+
+export function getGame(){
+    return game
 }
